@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'LoginController@getLogin');
+
+Route::post('/','LoginController@setLogin');
+
+Route::get('/tables','HomeController@showTable');
+
+Auth::routes();
+
+Route::get('/tables', 'LoginController@index')->name('home');
