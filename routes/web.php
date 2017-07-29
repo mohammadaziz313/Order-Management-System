@@ -11,12 +11,26 @@
 |
 */
 
-Route::get('/', 'LoginController@getLogin');
+//Auth::routes();
 
-Route::post('/','LoginController@setLogin');
+Route::get('/dashboard', 'DashBoardController@index');
 
-Route::get('/tables','HomeController@showTable');
+Route::get('/', 'AccessController@getLogin');
 
-Auth::routes();
+Route::post('/','AccessController@setLogin');
 
-Route::get('/tables', 'LoginController@index')->name('home');
+Route::get('/inventory','DashBoardController@showInventory');
+
+Route::get('/inventory/add-new-inventory','InventoryController@showAddNewItem');
+
+Route::post('/inventory/add-new-inventory','InventoryController@addNewItem');
+
+Route::get('/inventory/add-new-supplier','InventoryController@showAddNewSupplier');
+
+Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
+
+Route::post('/inventory/searchInventory','InventoryController@searchInventory');
+
+/*Route::get('/',function(){
+	return view('welcome');
+});*/

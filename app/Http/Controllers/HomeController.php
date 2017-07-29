@@ -11,11 +11,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function showTable()
-    {
-        return view('tables');
-    }
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -26,10 +21,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        return view('index');
     }
-    
-
 }
