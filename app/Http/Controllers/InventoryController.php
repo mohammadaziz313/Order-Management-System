@@ -62,6 +62,21 @@ class InventoryController extends Controller
     	return redirect()->action('DashBoardController@showSupplier');
     }
 
+    public function deleteSupplier(Request $request)
+    {
+    	/*$s = $request->
+    	$suppliers = DB::select('select * from supplier');
+
+    	foreach ($suppliers as $supplier) {
+    		if(isset($_POST[$supplier->name])){
+    			DB::delete("delete from supplier where name = '$supplier->name' ");
+    		}	
+    	}
+    	isset($_POST['test'])*/
+
+    	return redirect()->action('DashBoardController@showSupplier');	
+    }
+
     public function searchInventory(Request $request)
     {
     	$sku = $request->id;

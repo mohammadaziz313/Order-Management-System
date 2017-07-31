@@ -31,13 +31,15 @@ Route::get('/supplier-info/add-new-supplier','InventoryController@showAddNewSupp
 
 Route::post('/supplier-info/add-new-supplier','InventoryController@addNewSupplier');
 
+Route::get('/supplier-info/delete-supplier','InventoryController@deleteSupplier');
+
 //Route::get('/inventory-info','InventoryController@showInventoryInfo');
 
 //Route::get('/supplier-info','InventoryController@showSupplierInfo');
 
-Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
+/*Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
 
-Route::post('/inventory/searchInventory','InventoryController@searchInventory');
+Route::post('/inventory/searchInventory','InventoryController@searchInventory');*/
 
 /*Route::get('/',function(){
 	return view('welcome');

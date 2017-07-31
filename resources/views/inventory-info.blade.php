@@ -68,6 +68,7 @@
                       <th>Quantity</th>
                       <th>Product Type</th>
                       <th>Description</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
@@ -81,6 +82,7 @@
                       <td>@php echo "$i->quantity"; @endphp</td>
                       <td>@php echo "$i->producttype"; @endphp</td>
                       <td>@php echo "$i->description"; @endphp</td>
+                      <td></td>>
                     </tr>
                     @endforeach
                   </tbody>
