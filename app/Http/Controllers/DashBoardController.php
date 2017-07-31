@@ -16,9 +16,15 @@ class DashBoardController extends Controller
     {
     	#optimize this query.
     	$inventory = DB::select('select * from inventory');
-    	$suppliers = DB::select('select * from supplier');
     	$name = $request->name;
-        return view('inventory',compact('suppliers','inventory'));
+        return view('inventory-info',compact('inventory'));
     }
     
+    public function showSupplier(Request $request)
+    {
+        #optimize this query.
+        $suppliers = DB::select('select * from supplier');
+        $name = $request->name;
+        return view('supplier-info',compact('suppliers'));
+    }
 }

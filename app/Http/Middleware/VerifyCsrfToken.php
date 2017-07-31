@@ -14,8 +14,8 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
         //
     	'/',
-    	'/inventory/add-new-supplier',
-    	'/inventory/add-new-inventory',
-        '/inventory/searchInventory'
+    	'/supplier-info/add-new-supplier',
+    	'/inventory-info/add-new-inventory',
+        '/inventory-info/searchInventory'
     ];
 }
