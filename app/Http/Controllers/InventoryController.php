@@ -59,7 +59,7 @@ class InventoryController extends Controller
     	#perform validity check.
     	DB::insert('insert into supplier (name,company,email,address,phone) values (?,?,?,?,?)',
             	[$name,$company,$email,$address,$phone]);
-    	return redirect()->action('DashBoardController@showInventory');
+    	return redirect()->action('DashBoardController@showSupplier');
     }
 
     public function searchInventory(Request $request)

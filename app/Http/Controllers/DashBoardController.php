@@ -20,4 +20,11 @@ class DashBoardController extends Controller
         return view('inventory-info',compact('inventory'));
     }
     
+    public function showSupplier(Request $request)
+    {
+        #optimize this query.
+        $suppliers = DB::select('select * from supplier');
+        $name = $request->name;
+        return view('supplier-info',compact('suppliers'));
+    }
 }
