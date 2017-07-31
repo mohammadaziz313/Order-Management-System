@@ -14,14 +14,14 @@
 <link href=@php echo url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,800'); @endphp rel='stylesheet' type='text/css' />
 @endsection
 
-@section('inventory')
+@section('puchase-new')
   class = "active"
 @endsection
 
 @section('data')
 <div id="content-header">
-  <div id="breadcrumb"> <a href=@php echo url('/dashboard'); @endphp title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a><a href=@php echo url('/inventory'); @endphp class="tip-bottom">Inventory</a><a href=@php echo url('/inventory-info/add-new-inventory'); @endphp class="current">Add New Inventory</a></div>
-  <h1>Add New Inventory</h1>
+  <div id="breadcrumb"> <a href=@php echo url('/dashboard'); @endphp title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a><a href=@php echo url('/purchase'); @endphp class="tip-bottom">Purchase</a><a href=@php echo url('/purchase/add-purchase'); @endphp class="current">Process New Purchase</a></div>
+  <h1>Process New Purchase Order</h1>
 </div>
 <div class="container-fluid">
   <hr>
@@ -32,7 +32,7 @@
           <h5>Item Information</h5>
         </div>
         <div class="widget-content nopadding">
-          <form action=@php echo url('/inventory-info/add-new-inventory') @endphp method="post" class="form-horizontal">
+          <form action=@php echo url('/purchase/add-purchase') @endphp method="post" class="form-horizontal">
              <div class="control-group">
               <label class="control-label">SKU :</label>
               <div class="controls">
@@ -53,21 +53,29 @@
                   <option value=@php echo "$supplier->name"; @endphp >@php echo "$supplier->name"; @endphp</option>
                 @endforeach
                 </select>
-                <button type="submit" class="btn btn-info">Add</button>
+                <!-- <button type="submit" class="btn btn-info">Add</button> -->
               </div>
             </div>
+
+             <div class="control-group">
+              <label class="control-label">Quantity :</label>
+              <div class="controls">
+                <input name="quantity" type="text" class="span11" placeholder="Quantity of Item" />
+              </div>
+            </div> 
+
+
+
+
+
             <div class="control-group">
               <label class="control-label">Price :</label>
               <div class="controls">
                 <input name="price" type="text"  class="span11" placeholder="Price of Item"  />
               </div>
             </div>
-            <div class="control-group">
-              <label class="control-label">Quantity :</label>
-              <div class="controls">
-                <input name="quantity" type="text" class="span11" placeholder="Quantity of Item" />
-              </div>
-            </div>
+            
+
             <div class="control-group">
               <label class="control-label">Product Type :</label>
               <div class="controls">
@@ -81,7 +89,7 @@
                   <option value="Cars">Cars</option>
                   <option value="Bags">Bags</option>
                 </select>
-              <button type="submit" class="btn btn-info"> Add </button>
+              <!-- <button type="submit" class="btn btn-info"> Add </button> -->
               </div>
             </div>
             <!-- 
@@ -99,9 +107,28 @@
                 <span class="help-block">Provide a brief description</span>
               </div>
             </div>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-success">Save</button>
-            </div>
+            <!-- <div class="form-actions">
+              <button type="submit" class="btn btn-success">Continue</button>
+            </div> -->
+            <div class="container-fluid">
+    <div class="quick-actions_homepage">
+      <ul class="quick-actions">
+        <li class="bg_lb"> <a href=@php echo url('/purchase/add-purchaseContinue'); @endphp> <i class=""></i><b>Continue</b></a> </li>
+        <!--
+        <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Delete Item</a> </li>
+        <li class="bg_ly"> <a href=@php echo url('/inventory/update-item'); @endphp> <i class="icon-inbox"></i> Update Item </a> </li>
+        -->
+        <!-- <li class="bg_lo"> <a href=@php echo url('/purchase/add-new-supplier'); @endphp> <i class="icon-th"></i> Add Supplier</a> </li> -->
+        <!--
+        <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Listing</a> </li>
+        <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
+        <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
+        <li class="bg_lb"> <a href="interface.html"> <i class="icon-pencil"></i>Elements</a> </li>
+        <li class="bg_lg"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
+        <li class="bg_lr"> <a href="error404.html"> <i class="icon-info-sign"></i> Error</a> </li> -->
+      </ul>
+    </div>
+  </div>
           </form>
         </div>
       </div>
@@ -458,5 +485,9 @@
     </div>
   </div>
 </div></div>
+
+
 -->
+
+
 @endsection

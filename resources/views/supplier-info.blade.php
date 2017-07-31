@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+
 <!-- Start Checkbox Section -->
 
 
@@ -7,13 +8,16 @@
 
 
 <!--End Checkbox Section -->
+
 @section('search')
   <!--start-top-serch-->
 
 <div id="search">
+
 <form action=@php echo url('/inventory-info/searchInventory'); @endphp method="post">
   <input name="id" type="text" placeholder="Search Here"/>
   <a href=@php echo url('/inventory-info/search'); @endphp><button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button></a>
+
 </div>
 
 <!--close-top-serch-->
@@ -31,16 +35,25 @@
   <div class="container-fluid">
     <div class="quick-actions_homepage">
       <ul class="quick-actions">
+
         <li class="bg_lb"> <a href=@php echo url('/supplier-info/add-new-supplier'); @endphp> <i class="icon-dashboard"></i> Add New Supplier </a> </li>
+<<<<<<< HEAD
         
         <!-- <li class="bg_lg span2" for="submit-form"> <a href=@php echo url('/supplier-info/delete-supplier'); @endphp> <i class="icon-signal"></i> Delete Item</a> </li>
  -->        
         <!-- <li class="bg_lg span2" for="submit-form"> <i class="icon-signal"></i><input type="button"  onclick="deleteRow('datatable');" />Delete Item</li>
          --><!--
+=======
+
+        <!--
+        <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Delete Item</a> </li>
+>>>>>>> origin/temp
         <li class="bg_ly"> <a href=@php echo url('/inventory/update-item'); @endphp> <i class="icon-inbox"></i> Update Item </a> </li>
         -->
+
         <!-- <li class="bg_lo"> <a href=@php echo url('/supplier-info/add-new-supplier'); @endphp> <i class="icon-th"></i> Add Supplier</a> </li>
          --><!--
+
         <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Listing</a> </li>
         <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
         <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
@@ -50,6 +63,7 @@
       </ul>
     </div>
   </div>
+
 <!--End-Action boxes-->
   <div class="container-fluid">
     <hr>    
@@ -65,6 +79,7 @@
                     <tr>
                       <th><input type="checkbox" id="title-table-checkbox" name="title-table-checkbox" /></th>
                       <th>Name</th>
+
                     <th>Company</th>
                     <th>Address</th>
                     <th>Email</th>
@@ -74,6 +89,7 @@
                   </thead>
                   <!-- <form method="post" action=@php echo ('/supplier-info/delete-supplier'); @endphp target="_blank"> -->
                   <tbody>
+
                   @foreach($suppliers as $i)
                   <tr>
                   <!-- <form method="post" action="/supplier-info/delete-supplier"> -->
@@ -87,15 +103,21 @@
                     <td><input type="checkbox" name=@php echo "$i->name"; @endphp /></td>
                   </tr>
                   @endforeach
+<<<<<<< HEAD
                   <!-- <input type="submit" id="submit-form" class="hidden" />
  -->                  </tbody>
                   </form>
+=======
+
+                  </tbody>
+>>>>>>> origin/temp
                 </table>
                 <input class="btn btn-danger" type="button" value="Delete" onclick="deleteRow('datatable');" />
               </div>
             </div>
         </div>
       </div>
+
     </div>
 <!-- <script src= @php echo ('js/jquery.min.js') @endphp></script> 
 <script src=@php echo ('js/jquery.ui.custom.js') @endphp></script> 
