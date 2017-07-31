@@ -19,13 +19,17 @@ Route::get('/', 'AccessController@getLogin');
 
 Route::post('/','AccessController@setLogin');
 
-Route::get('/inventory','DashBoardController@showInventory');
+Route::get('/inventory-info','DashBoardController@showInventory');
 
-Route::get('/inventory/add-new-inventory','InventoryController@showAddNewItem');
+Route::get('/inventory-info/add-new-inventory','InventoryController@showAddNewItem');
 
-Route::post('/inventory/add-new-inventory','InventoryController@addNewItem');
+Route::post('/inventory-info/add-new-inventory','InventoryController@addNewItem');
 
-Route::get('/inventory/add-new-supplier','InventoryController@showAddNewSupplier');
+Route::get('/supplier-info/add-new-supplier','InventoryController@showAddNewSupplier');
+
+Route::post('/supplier-info/add-new-supplier','InventoryController@addNewSupplier');
+
+Route::get('/supplier-info','InventoryController@showSupplierInfo');
 
 Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
 

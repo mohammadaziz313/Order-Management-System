@@ -20,7 +20,7 @@
 
 @section('data')
 <div id="content-header">
-  <div id="breadcrumb"> <a href=@php echo url('/dashboard'); @endphp title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a><a href=@php echo url('/inventory'); @endphp class="tip-bottom">Inventory</a><a href=@php echo url('/inventory/add-new-inventory'); @endphp class="current">Add New Inventory</a></div>
+  <div id="breadcrumb"> <a href=@php echo url('/dashboard'); @endphp title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a><a href=@php echo url('/inventory'); @endphp class="tip-bottom">Inventory</a><a href=@php echo url('/inventory-info/add-new-inventory'); @endphp class="current">Add New Inventory</a></div>
   <h1>Add New Inventory</h1>
 </div>
 <div class="container-fluid">
@@ -32,7 +32,7 @@
           <h5>Item Information</h5>
         </div>
         <div class="widget-content nopadding">
-          <form action=@php echo url('/inventory/add-new-inventory') @endphp method="post" class="form-horizontal">
+          <form action=@php echo url('/inventory-info/add-new-inventory') @endphp method="post" class="form-horizontal">
              <div class="control-group">
               <label class="control-label">SKU :</label>
               <div class="controls">
@@ -52,13 +52,6 @@
                 @foreach($suppliers as $supplier)
                   <option value=@php echo "$supplier->name"; @endphp >@php echo "$supplier->name"; @endphp</option>
                 @endforeach
-                  <!-- <option>Second option</option>
-                  <option>Third option</option>
-                  <option>Fourth option</option>
-                  <option>Fifth option</option>
-                  <option>Sixth option</option>
-                  <option>Seventh option</option>
-                  <option>Eighth option</option> -->
                 </select>
                 <button type="submit" class="btn btn-info">Add</button>
               </div>

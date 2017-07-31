@@ -38,7 +38,7 @@
         <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
       </ul>
     </li>
-    <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
+    <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i> new message</a></li>
         <li class="divider"></li>
@@ -69,7 +69,14 @@
     <li @yield('dashboard')><a href=@php echo url('dashboard'); @endphp><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
     <li @yield('order')> <a href="charts.html"><i class="icon icon-signal"></i> <span>Purchase Order</span></a> </li>
     <li @yield('sales')> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Sales Order</span></a> </li>
-    <li @yield('inventory')><a href=@php echo url('inventory'); @endphp><i class="icon icon-th"></i> <span>Inventory</span></a></li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Inventory</span></a>
+      <ul>
+        <li @yield('inventory-info')><a href=@php echo url('inventory-info'); @endphp>Inventory Info</a></li>
+        <li @yield('supplier-info')><a href=@php echo url('supplier-info'); @endphp>Supplier Info</a></li>
+        <!-- <li><a href="form-wizard.html">Form with Wizard</a></li> -->
+      </ul>
+    </li>
+    <!-- <li><a href=@php echo url('inventory'); @endphp><i class="icon icon-th"></i> <span>Inventory</span></a></li> -->
     <li @yield('listing')><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Listing</span></a></li>
   </ul>
 </div>
