@@ -16,6 +16,7 @@ class VerifyCsrfToken extends BaseVerifier
     	'/',
     	'/supplier-info/add-new-supplier',
     	'/inventory-info/add-new-inventory',
+        '/purchase/add-purchaseContinue',
         '/inventory-info/searchInventory'
 
     ];

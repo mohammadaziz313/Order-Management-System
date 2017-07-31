@@ -67,7 +67,14 @@
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
   <ul>
     <li @yield('dashboard')><a href=@php echo url('dashboard'); @endphp><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-    <li @yield('order')> <a href="charts.html"><i class="icon icon-signal"></i> <span>Purchase Order</span></a> </li>
+    <li class="submenu"> <a href=""><i class="icon icon-th-list"></i> <span>Purchase Order</span></a> 
+      <ul>
+        <li @yield('purchase')><a href=@php echo url('purchase'); @endphp>All Purchase List</a></li>
+        <li @yield('purchase-new')><a href=@php echo url('add-purchase'); @endphp>New Purchase Order</a></li>
+
+      </ul>
+
+    </li>
     <li @yield('sales')> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Sales Order</span></a> </li>
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Inventory</span></a>
       <ul>
