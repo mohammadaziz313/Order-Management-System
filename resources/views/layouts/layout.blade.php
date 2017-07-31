@@ -73,8 +73,10 @@
       <ul>
         <li @yield('inventory-info')><a href=@php echo url('inventory-info'); @endphp>Inventory Info</a></li>
         <li @yield('supplier-info')><a href=@php echo url('supplier-info'); @endphp>Supplier Info</a></li>
+
       </ul>
     </li>
+
     <li @yield('listing')><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Listing</span></a></li>
   </ul>
 </div>

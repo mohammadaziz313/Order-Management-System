@@ -17,5 +17,6 @@ class VerifyCsrfToken extends BaseVerifier
     	'/supplier-info/add-new-supplier',
     	'/inventory-info/add-new-inventory',
         '/inventory-info/searchInventory'
+
     ];
 }

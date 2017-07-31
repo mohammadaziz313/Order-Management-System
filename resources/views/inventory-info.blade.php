@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+
 <!-- Start Checkbox Section -->
 
 
@@ -7,6 +8,7 @@
 
 
 <!--End Checkbox Section -->
+
 @section('search')
   <!--start-top-serch-->
 
