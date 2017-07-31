@@ -16,7 +16,7 @@
       <ul class="quick-actions">
 	  
         <li class="bg_lb"> <a href=@php echo url('/dashboard'); @endphp> <i class="icon-dashboard"></i> My Dashboard </a> </li>
-        <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Purchase Order</a> </li>
+        <li class="bg_lg span3"> <a href=@php echo url('/purchase'); @endphp> <i class="icon-signal"></i> Purchase Order</a> </li>
         <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i>Sales Order </a> </li>
         <li class="bg_lo"> <a href=@php echo url('/inventory'); @endphp> <i class="icon-th"></i> Inventory</a> </li>
 		
