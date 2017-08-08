@@ -55,6 +55,7 @@ Route::get('/purchase','DashBoardController@showPurchase');
 
 Route::post('/purchase/add-new-product','PurchaseController@addNewItem');*/
 
+
 Route::get('/purchase/add-new-supplier','PurchaseController@showAddNewSupplier');
 
 Route::post('/purchase/add-new-supplier','PurchaseController@addNewSupplier');
@@ -70,6 +71,7 @@ Route::post('/purchase/add-purchase','PurchaseController@addNewItem');
 Route::get('/purchase/add-purchaseContinue','PurchaseController@showAddNewItemContinue');
 
 Route::post('/purchase/add-purchaseContinue','PurchaseController@addNewItem');
+
 
 
 /*Route::get('/',function(){
