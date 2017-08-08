@@ -28,7 +28,7 @@ class PurchaseController extends Controller
     	$quantity = $request->quantity;
     	
     	#perform validity check.
-    	DB::insert('insert into purchase (sku,productDescription,quantity) values (?,?,?)',
+    	DB::insert('insert into purchase (sku,productdesc,quantity) values (?,?,?)',
             	[$sku,$productDescription,$quantity]);
     	return redirect()->action('DashBoardController@showPurchase');
     }
