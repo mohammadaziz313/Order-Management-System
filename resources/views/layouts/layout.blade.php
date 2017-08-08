@@ -70,12 +70,20 @@
     <li class="submenu"> <a href=""><i class="icon icon-th-list"></i> <span>Purchase Order</span></a> 
       <ul>
         <li @yield('purchase')><a href=@php echo url('purchase'); @endphp>All Purchase List</a></li>
-        <li @yield('purchase-new')><a href=@php echo url('add-purchase'); @endphp>New Purchase Order</a></li>
+        <li @yield('purchase-new')><a href=@php echo url('purchase'); @endphp>New Purchase Order</a></li>
 
       </ul>
 
     </li>
-    <li @yield('sales')> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Sales Order</span></a> </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Sales Order</span></a>
+    <ul>
+        <li @yield('sales')><a href=@php echo url('sales'); @endphp>All Sales List</a></li>
+        <li @yield('sales-new')><a href=@php echo url('sales'); @endphp>New Sales</a></li>
+
+      </ul>
+
+    </li>
+
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Inventory</span></a>
       <ul>
         <li @yield('inventory-info')><a href=@php echo url('inventory-info'); @endphp>Inventory Info</a></li>
@@ -127,7 +135,6 @@
 <script src="js/matrix.popover.js"></script> 
 <script src="js/jquery.dataTables.min.js"></script> 
 <script src="js/matrix.tables.js"></script> 
-
 
 <script type="text/javascript">
   // This function is called from the pop-up menus to transfer to

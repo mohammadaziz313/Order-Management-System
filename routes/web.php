@@ -45,6 +45,7 @@ Route::get('/supplier-info/delete-supplier','InventoryController@deleteSupplier'
 
 Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
 
+
 Route::post('/inventory/searchInventory','InventoryController@searchInventory');*/
 
 
@@ -70,6 +71,33 @@ Route::post('/purchase/add-purchase','PurchaseController@addNewItem');
 Route::get('/purchase/add-purchaseContinue','PurchaseController@showAddNewItemContinue');
 
 Route::post('/purchase/add-purchaseContinue','PurchaseController@addNewItem');
+
+// Sales Routes
+
+
+/*Route::get('/purchase/add-new-product','PurchaseController@showAddNewItem');
+
+Route::post('/purchase/add-new-product','PurchaseController@addNewItem');*/
+
+Route::get('/sales/add-new-supplier','SalesController@showAddNewSupplier');
+
+Route::post('/sales/add-new-supplier','SalesController@addNewSupplier');
+
+Route::post('/sales/searchProduct','SalesController@searchProduct');
+
+
+//New_sales Routes
+Route::get('/sales','DashBoardController@showSales');
+Route::get('/sales/add-sales','SalesController@showAddNewItem');
+
+Route::post('/sales/add-sales','SalesController@addNewItem');
+
+Route::get('/sales/add-salesContinue','SalesController@showAddNewItemContinue');
+
+Route::post('/sales/add-salesContinue','SalesController@addNewItem');
+
+
+
 
 
 /*Route::get('/',function(){
