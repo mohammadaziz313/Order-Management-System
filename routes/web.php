@@ -41,7 +41,7 @@ Route::get('/supplier-info/delete-supplier','InventoryController@deleteSupplier'
 
 
 /*Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
-=======
+
 
 Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
 
