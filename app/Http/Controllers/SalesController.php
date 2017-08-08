@@ -5,20 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PurchaseController extends Controller
+class SalesController extends Controller
 {
     public function showAddNewItem(Request $request){
     	$name = $request->name;
     	$users= DB::select("select * from users where username = '$name'");
     	$suppliers = DB::select('select name from supplier');
-    	return view('add-purchase',compact('suppliers'));
+    	return view('add-sales',compact('suppliers'));
     }
 
      public function showAddNewItemContinue(Request $request){
         $name = $request->name;
         $users= DB::select("select * from users where username = '$name'");
         $suppliers = DB::select('select name from supplier');
-        return view('add-purchaseContinue',compact('suppliers'));
+        return view('add-salesContinue',compact('suppliers'));
     }
 
     public function addNewItem(Request $request){
@@ -28,9 +28,11 @@ class PurchaseController extends Controller
     	$quantity = $request->quantity;
     	
     	#perform validity check.
-    	DB::insert('insert into purchase (sku,productDescription,quantity) values (?,?,?)',
+    	DB::insert('insert into sales (sku,productDescription,quantity) values (?,?,?)',
             	[$sku,$productDescription,$quantity]);
-    	return redirect()->action('DashBoardController@showPurchase');
+    	return redirect()->action('DashBoardController@showSales');
+    	
+    	//return redirect()->action('DashBoardController@showProduct');
     }
 
     public function showAddNewSupplier(Request $request){
@@ -52,6 +54,6 @@ class PurchaseController extends Controller
 
     public function searchProduct(Request $request){
     	$sku = $request->id;
-    	$items = DB::select("select * from purchase where sku = '$sku'");
-    	return view('purchase-search',compact('items'));
+    	$items = DB::select("select * from sales where sku = '$sku'");
+    	return view('sales-search',compact('items'));
     }}
