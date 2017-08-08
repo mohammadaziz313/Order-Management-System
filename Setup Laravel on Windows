@@ -1,0 +1,19 @@
+#Install PHP
+
+1) Visit this link: http://bit.ly/1ru6wsN
+2) Download the latest threaded version(32/64 bit).
+3) Extract the files.
+4) Copy the file to your C: drive.
+
+#Install Composer
+
+1) Visit this link: http://bit.ly/1t3v7eu
+2) Set the path of php.exe to the php.exe in the recently copied file for php in C: drive.
+3) Finish Installation and move on to Laravel.
+
+#Install Laravel
+
+1) Run Command Prompt.
+2) Paste this command : composer global require "laravel/installer"
+3) It will take some time to run.
+4) Laravel has been successfully installed.

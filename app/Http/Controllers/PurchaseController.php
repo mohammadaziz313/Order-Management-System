@@ -11,7 +11,16 @@ class PurchaseController extends Controller
     	$name = $request->name;
     	$users= DB::select("select * from users where username = '$name'");
     	$suppliers = DB::select('select name from supplier');
-    	return view('add-new-product',compact('suppliers'));
+
+    	return view('add-purchase',compact('suppliers'));
+    }
+
+     public function showAddNewItemContinue(Request $request){
+        $name = $request->name;
+        $users= DB::select("select * from users where username = '$name'");
+        $suppliers = DB::select('select name from supplier');
+        return view('add-purchaseContinue',compact('suppliers'));
+
     }
 
     public function addNewItem(Request $request){
@@ -21,7 +30,9 @@ class PurchaseController extends Controller
     	$quantity = $request->quantity;
     	
     	#perform validity check.
+
     	DB::insert('insert into purchase (sku,productDescription,quantity) values (?,?,?)',
+
             	[$sku,$productDescription,$quantity]);
     	return redirect()->action('DashBoardController@showProduct');
     }

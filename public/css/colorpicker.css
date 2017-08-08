@@ -4,6 +4,14 @@
 	Licensed under the Apache License v2.0
 	http://www.apache.org/licenses/LICENSE-2.0
 */
+input {
+    border:none;
+    background: none;
+    
+}
+.hidden{
+    display: none;
+}
  .colorpicker-saturation {
 	width: 100px;
 	height: 100px;
