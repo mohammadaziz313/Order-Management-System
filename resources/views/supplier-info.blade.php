@@ -37,17 +37,15 @@
       <ul class="quick-actions">
 
         <li class="bg_lb"> <a href=@php echo url('/supplier-info/add-new-supplier'); @endphp> <i class="icon-dashboard"></i> Add New Supplier </a> </li>
-<<<<<<< HEAD
+
         
-        <!-- <li class="bg_lg span2" for="submit-form"> <a href=@php echo url('/supplier-info/delete-supplier'); @endphp> <i class="icon-signal"></i> Delete Item</a> </li>
- -->        
-        <!-- <li class="bg_lg span2" for="submit-form"> <i class="icon-signal"></i><input type="button"  onclick="deleteRow('datatable');" />Delete Item</li>
-         --><!--
-=======
+        <!-- <li class="bg_lg span2" for="submit-form"> <a href=@php echo url('/supplier-info/delete-supplier'); @endphp> <i class="icon-signal"></i> Delete Item</a> </li>        
+         <li class="bg_lg span2" for="submit-form"> <i class="icon-signal"></i><input type="button"  onclick="deleteRow('datatable');" />Delete Item</li>
+         -->
 
         <!--
         <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Delete Item</a> </li>
->>>>>>> origin/temp
+
         <li class="bg_ly"> <a href=@php echo url('/inventory/update-item'); @endphp> <i class="icon-inbox"></i> Update Item </a> </li>
         -->
 
@@ -103,14 +101,12 @@
                     <td><input type="checkbox" name=@php echo "$i->name"; @endphp /></td>
                   </tr>
                   @endforeach
-<<<<<<< HEAD
                   <!-- <input type="submit" id="submit-form" class="hidden" />
  -->                  </tbody>
                   </form>
-=======
+
 
                   </tbody>
->>>>>>> origin/temp
                 </table>
                 <input class="btn btn-danger" type="button" value="Delete" onclick="deleteRow('datatable');" />
               </div>

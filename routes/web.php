@@ -39,12 +39,11 @@ Route::get('/supplier-info/delete-supplier','InventoryController@deleteSupplier'
 
 //Route::get('/supplier-info','InventoryController@showSupplierInfo');
 
-<<<<<<< HEAD
+
 /*Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
-=======
+
 
 Route::post('/inventory/add-new-supplier','InventoryController@addNewSupplier');
->>>>>>> origin/temp
 
 Route::post('/inventory/searchInventory','InventoryController@searchInventory');*/
 
